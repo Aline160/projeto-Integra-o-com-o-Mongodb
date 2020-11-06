@@ -12,7 +12,7 @@ const getAll = (req, res) => {
 
 const getCompradores = (req, res) => {
     const compradores= req.params.id;
-      clientes.find({comprou:true}, function(err,clientes){
+      clientes.find({comprou:true},'nome email', function(err,clientes){
         res.status(200).send(clientes);
       })
 };
